@@ -1,0 +1,23 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS studentdb;
+USE studentdb;
+
+-- Create students table
+CREATE TABLE IF NOT EXISTS students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    roll_no INT UNIQUE NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    course VARCHAR(50) NOT NULL,
+    marks INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert sample data
+INSERT INTO students (roll_no, name, age, email, course, marks) VALUES
+(101, 'Rahul Sharma', 20, 'rahul.sharma@example.com', 'B.Tech CSE', 85),
+(102, 'Priya Singh', 21, 'priya.singh@example.com', 'B.Tech IT', 92),
+(103, 'Amit Kumar', 19, 'amit.kumar@example.com', 'B.Sc Physics', 78),
+(104, 'Sneha Patel', 22, 'sneha.patel@example.com', 'B.Com', 88),
+(105, 'Rajesh Verma', 20, 'rajesh.verma@example.com', 'B.Tech ECE', 75);
