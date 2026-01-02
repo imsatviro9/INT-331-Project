@@ -83,8 +83,6 @@ Cloud database support
 Satvir Singh
 B.Tech Student
 
-⭐ Show Some Love
-If you like this project, please ⭐ the repository!
 
 
 
